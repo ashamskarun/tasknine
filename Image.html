@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Disappear on Mouseover</title>
+    <style>
+        /* Style for the container box */
+        .image-container {
+            width: 200px; /* Set the width of the box */
+            height: 200px; /* Set the height of the box */
+            border: 1px solid rgb(250, 247, 247); /* Add a border */
+            overflow: hidden; /* Hide overflowing content */
+        }
+
+        /* Style for the image */
+        .image-container img {
+            width: 100%; /* Make the image fill the container */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img id="myImage" src="https://cdn4.iconfinder.com/data/icons/internet-security-flat-2/32/Internet_Security_hyper_link_web_chain_connect-1024.png" alt="Image">
+    </div>
+
+    <script>
+        const imageElement = document.getElementById('myImage');
+
+        imageElement.addEventListener('mouseover', () => {
+          imageElement.style.display = 'none'; // Hide image
+        });
+
+        imageElement.addEventListener('mouseout', () => {
+          imageElement.style.display = 'block'; // Show image again
+        });
+    </script>
+</body>
+</html>
